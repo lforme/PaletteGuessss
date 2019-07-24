@@ -1,0 +1,108 @@
+PODS:
+  - Action (4.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - AVOSCloud (11.6.4)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Differentiator (4.0.1)
+  - EasyAnimation (2.2.1)
+  - HandyJSON (5.0.0)
+  - IQKeyboardManagerSwift (6.3.0)
+  - JCore (2.1.1)
+  - JPush (3.2.1):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - MJRefresh (3.2.0)
+  - MultiPeer (0.1.0)
+  - NXDrawKit (0.8.0)
+  - PKHUD (5.2.1)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SnapKit (5.0.0)
+  - Then (2.5.0)
+  - UPCarouselFlowLayout (1.1.2)
+
+DEPENDENCIES:
+  - Action (~> 4.0.0)
+  - AVOSCloud
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - EasyAnimation
+  - HandyJSON (~> 5.0.0)
+  - IQKeyboardManagerSwift (= 6.3.0)
+  - JPush
+  - MJRefresh
+  - MultiPeer
+  - NXDrawKit
+  - PKHUD (~> 5.2.1)
+  - RxCocoa (~> 5.0.0)
+  - RxDataSources
+  - RxSwift (~> 5.0.0)
+  - SnapKit (~> 5.0.0)
+  - Then
+  - UPCarouselFlowLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Action
+    - AVOSCloud
+    - Differentiator
+    - EasyAnimation
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - JCore
+    - JPush
+    - MJRefresh
+    - MultiPeer
+    - NXDrawKit
+    - PKHUD
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - Then
+    - UPCarouselFlowLayout
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
+  AVOSCloud: 0f5fe2be8ce99ca6eb272243041acaa9369ba8f0
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
+  JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MultiPeer: 8be1b3b47faa9d2e94b4c8c29a2d984eb0d68007
+  NXDrawKit: 62a73ad64ae1d7a04b87256c0ee106426ea3abee
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  Then: 0157115e883545c77967b452fe74a1d25fb796e1
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
+
+PODFILE CHECKSUM: e5e40c6e28bc3fd38e3d80333b4d9838105fb44d
+
+COCOAPODS: 1.5.3
