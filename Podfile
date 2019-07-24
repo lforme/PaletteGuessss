@@ -25,6 +25,7 @@ target 'PaletteGuess' do
   pod 'MultiPeer'
   pod 'UPCarouselFlowLayout'
   pod 'HandyJSON', '~> 5.0.0'
+  pod "Macaw"
   
   pod 'JPush'
 

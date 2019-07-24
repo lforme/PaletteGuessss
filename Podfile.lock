@@ -13,6 +13,8 @@ PODS:
   - JCore (2.1.1)
   - JPush (3.2.1):
     - JCore (< 3.0.0, >= 2.0.0)
+  - Macaw (0.9.5):
+    - SWXMLHash
   - MJRefresh (3.2.0)
   - MultiPeer (0.1.0)
   - NXDrawKit (0.8.0)
@@ -28,6 +30,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
   - SnapKit (5.0.0)
+  - SWXMLHash (4.9.0)
   - Then (2.5.0)
   - UPCarouselFlowLayout (1.1.2)
 
@@ -39,6 +42,7 @@ DEPENDENCIES:
   - HandyJSON (~> 5.0.0)
   - IQKeyboardManagerSwift (= 6.3.0)
   - JPush
+  - Macaw
   - MJRefresh
   - MultiPeer
   - NXDrawKit
@@ -60,6 +64,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - JCore
     - JPush
+    - Macaw
     - MJRefresh
     - MultiPeer
     - NXDrawKit
@@ -69,6 +74,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SWXMLHash
     - Then
     - UPCarouselFlowLayout
 
@@ -91,6 +97,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
   JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
+  Macaw: 10bf9e327cb75f24e3225d5229a80ed544df85f0
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MultiPeer: 8be1b3b47faa9d2e94b4c8c29a2d984eb0d68007
   NXDrawKit: 62a73ad64ae1d7a04b87256c0ee106426ea3abee
@@ -100,9 +107,10 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: e5e40c6e28bc3fd38e3d80333b4d9838105fb44d
+PODFILE CHECKSUM: 6888c0618a1ae4a1d5d61380b38ffed74fda1b0d
 
 COCOAPODS: 1.5.3
