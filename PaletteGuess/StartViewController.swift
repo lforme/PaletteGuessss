@@ -10,10 +10,17 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var morePeopleButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         interactiveNavigationBarHidden = true
         
-
+        setupButtons()
+    }
+    
+    
+    func setupButtons() {
+        morePeopleButton.setCircular(value: 7)
     }
 }

@@ -23,7 +23,7 @@ target 'PaletteGuess' do
   pod 'MJRefresh'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'MultiPeer'
-  pod 'UPCarouselFlowLayout'
+  pod 'AlignedCollectionViewFlowLayout'
   pod 'HandyJSON', '~> 5.0.0'
   pod "Macaw"
   

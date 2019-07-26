@@ -11,6 +11,7 @@ import ChameleonFramework
 
 class BaseNavigationController: UINavigationController {
 
+    
     @IBInspectable open var clearBackTitle: Bool = true
     
     override init(rootViewController: UIViewController) {
@@ -61,12 +62,15 @@ private extension BaseNavigationController {
         
         self.interactivePopGestureRecognizer?.delegate = self
         self.delegate = self
+        
+        navigationBar.barTintColor = UIColor(averageColorFrom: UIImage(named: "start_bg_image")!)
     }
     
     func controlClearBackTitle() {
         if clearBackTitle {
             topViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            topViewController?.navigationItem.backBarButtonItem?.tintColor = UIColor.black
+            topViewController?.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.0327594839, green: 0.169680208, blue: 0.3369554877, alpha: 1)
+            
         }
     }
 }

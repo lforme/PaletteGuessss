@@ -22,6 +22,8 @@
 		9C9D97C022E734C1001610E0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */; };
 		9C9D97C322E73799001610E0 /* FZYouMaoZaiJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */; };
 		9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97C422E73AC9001610E0 /* Font+Ex.swift */; };
+		9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */; };
+		9CC272BA22EB2DFF005D9EB3 /* MorePeopleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */; };
 		D3536831A92D3806408D0723 /* Pods_PaletteGuess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580DED6197B2800D40E54597 /* Pods_PaletteGuess.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYouMaoZaiJ.TTF; sourceTree = "<group>"; };
 		9C9D97C422E73AC9001610E0 /* Font+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ex.swift"; sourceTree = "<group>"; };
+		9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePeopleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +85,13 @@
 		9C9D97A922E71F2B001610E0 /* PaletteGuess */ = {
 			isa = PBXGroup;
 			children = (
+				9CC272B822EB2DC5005D9EB3 /* Views */,
 				9C9D97C122E7378C001610E0 /* StaticResource */,
 				9C9D97BE22E734A9001610E0 /* CommonFramework */,
 				9C9D97AA22E71F2B001610E0 /* AppDelegate.swift */,
 				9C9D97AC22E71F2B001610E0 /* ViewController.swift */,
 				9C9D97BC22E7343F001610E0 /* StartViewController.swift */,
+				9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */,
 				9C9D97AE22E71F2B001610E0 /* Main.storyboard */,
 				9C9D97B122E71F2C001610E0 /* Assets.xcassets */,
 				9C9D97B322E71F2C001610E0 /* LaunchScreen.storyboard */,
@@ -97,6 +103,7 @@
 		9C9D97BE22E734A9001610E0 /* CommonFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */,
 				9C5225E022E7FAC7007F05F3 /* ViewLoader.swift */,
 				9C9D97C422E73AC9001610E0 /* Font+Ex.swift */,
 				9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */,
@@ -115,6 +122,13 @@
 				9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */,
 			);
 			path = StaticResource;
+			sourceTree = "<group>";
+		};
+		9CC272B822EB2DC5005D9EB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A0BA5689B7B9142FBBAFB1AE /* Pods */ = {
@@ -213,6 +227,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PaletteGuess/Pods-PaletteGuess-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
@@ -230,12 +245,12 @@
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlignedCollectionViewFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
@@ -253,7 +268,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -285,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC272BA22EB2DFF005D9EB3 /* MorePeopleController.swift in Sources */,
 				9C9D97C022E734C1001610E0 /* BaseNavigationController.swift in Sources */,
 				9C9D97AD22E71F2B001610E0 /* ViewController.swift in Sources */,
 				9C5225D722E7F24E007F05F3 /* PGStaticConst.swift in Sources */,
@@ -296,6 +311,7 @@
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,
+				9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +462,7 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PaletteGuess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oldwhy.PaletteGuess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -466,10 +479,7 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PaletteGuess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oldwhy.PaletteGuess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

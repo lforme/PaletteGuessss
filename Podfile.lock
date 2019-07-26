@@ -2,6 +2,7 @@ PODS:
   - Action (4.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - AlignedCollectionViewFlowLayout (1.1.2)
   - AVOSCloud (11.6.4)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
@@ -32,10 +33,10 @@ PODS:
   - SnapKit (5.0.0)
   - SWXMLHash (4.9.0)
   - Then (2.5.0)
-  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Action (~> 4.0.0)
+  - AlignedCollectionViewFlowLayout
   - AVOSCloud
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - EasyAnimation
@@ -52,11 +53,11 @@ DEPENDENCIES:
   - RxSwift (~> 5.0.0)
   - SnapKit (~> 5.0.0)
   - Then
-  - UPCarouselFlowLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Action
+    - AlignedCollectionViewFlowLayout
     - AVOSCloud
     - Differentiator
     - EasyAnimation
@@ -76,7 +77,6 @@ SPEC REPOS:
     - SnapKit
     - SWXMLHash
     - Then
-    - UPCarouselFlowLayout
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -89,6 +89,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   AVOSCloud: 0f5fe2be8ce99ca6eb272243041acaa9369ba8f0
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -109,8 +110,7 @@ SPEC CHECKSUMS:
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
-  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 6888c0618a1ae4a1d5d61380b38ffed74fda1b0d
+PODFILE CHECKSUM: 8324601cc9c011a37f98841fcb1251eee62481a7
 
 COCOAPODS: 1.5.3
