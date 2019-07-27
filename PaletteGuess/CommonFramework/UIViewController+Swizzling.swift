@@ -26,7 +26,7 @@ extension UIViewController {
             if associateValue == nil {
                 associateValue = false
             }
-            return associateValue as! Bool;
+            return associateValue as! Bool
         }
         set {
             objc_setAssociatedObject(self, &interactiveNavigationBarHiddenAssociationKey, newValue, .OBJC_ASSOCIATION_RETAIN)

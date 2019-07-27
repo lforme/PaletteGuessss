@@ -22,6 +22,11 @@
 		9C9D97C022E734C1001610E0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */; };
 		9C9D97C322E73799001610E0 /* FZYouMaoZaiJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */; };
 		9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97C422E73AC9001610E0 /* Font+Ex.swift */; };
+		9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */; };
+		9CB10CBF22EBFE350034C14B /* Peer+role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBE22EBFE350034C14B /* Peer+role.swift */; };
+		9CB10CC122EBFE780034C14B /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */; };
+		9CB10CC322EC12B40034C14B /* WaitingPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB10CC222EC12B40034C14B /* WaitingPlayerView.xib */; };
+		9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CC422EC12D00034C14B /* WaitingPlayerView.swift */; };
 		9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */; };
 		9CC272BA22EB2DFF005D9EB3 /* MorePeopleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */; };
 		D3536831A92D3806408D0723 /* Pods_PaletteGuess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580DED6197B2800D40E54597 /* Pods_PaletteGuess.framework */; };
@@ -48,6 +53,11 @@
 		9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYouMaoZaiJ.TTF; sourceTree = "<group>"; };
 		9C9D97C422E73AC9001610E0 /* Font+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ex.swift"; sourceTree = "<group>"; };
+		9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIdevice+Ex.swift"; sourceTree = "<group>"; };
+		9CB10CBE22EBFE350034C14B /* Peer+role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Peer+role.swift"; sourceTree = "<group>"; };
+		9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		9CB10CC222EC12B40034C14B /* WaitingPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPlayerView.xib; sourceTree = "<group>"; };
+		9CB10CC422EC12D00034C14B /* WaitingPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingPlayerView.swift; sourceTree = "<group>"; };
 		9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePeopleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +113,8 @@
 		9C9D97BE22E734A9001610E0 /* CommonFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */,
+				9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */,
 				9CC272B622EB2CF8005D9EB3 /* UIView+Ex.swift */,
 				9C5225E022E7FAC7007F05F3 /* ViewLoader.swift */,
 				9C9D97C422E73AC9001610E0 /* Font+Ex.swift */,
@@ -112,6 +124,7 @@
 				9C5225D922E7F2B7007F05F3 /* HasDisposeBag.swift */,
 				9C5225DA22E7F2B7007F05F3 /* NSObject+Rx.swift */,
 				9C5225DE22E7F388007F05F3 /* UIViewController+Swizzling.swift */,
+				9CB10CBE22EBFE350034C14B /* Peer+role.swift */,
 			);
 			path = CommonFramework;
 			sourceTree = "<group>";
@@ -127,6 +140,8 @@
 		9CC272B822EB2DC5005D9EB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9CB10CC422EC12D00034C14B /* WaitingPlayerView.swift */,
+				9CB10CC222EC12B40034C14B /* WaitingPlayerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +227,7 @@
 				9C9D97B522E71F2C001610E0 /* LaunchScreen.storyboard in Resources */,
 				9C9D97B222E71F2C001610E0 /* Assets.xcassets in Resources */,
 				9C9D97B022E71F2B001610E0 /* Main.storyboard in Resources */,
+				9CB10CC322EC12B40034C14B /* WaitingPlayerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,13 +317,17 @@
 			files = (
 				9CC272BA22EB2DFF005D9EB3 /* MorePeopleController.swift in Sources */,
 				9C9D97C022E734C1001610E0 /* BaseNavigationController.swift in Sources */,
+				9CB10CBF22EBFE350034C14B /* Peer+role.swift in Sources */,
 				9C9D97AD22E71F2B001610E0 /* ViewController.swift in Sources */,
 				9C5225D722E7F24E007F05F3 /* PGStaticConst.swift in Sources */,
 				9C5225DC22E7F2B7007F05F3 /* HasDisposeBag.swift in Sources */,
+				9CB10CC122EBFE780034C14B /* ObjectAssociation.swift in Sources */,
 				9C5225DF22E7F388007F05F3 /* UIViewController+Swizzling.swift in Sources */,
 				9C5225E122E7FAC7007F05F3 /* ViewLoader.swift in Sources */,
 				9C9D97AB22E71F2B001610E0 /* AppDelegate.swift in Sources */,
+				9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */,
 				9C5225DB22E7F2B7007F05F3 /* APPDelegate+Ex.swift in Sources */,
+				9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */,
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,
@@ -462,7 +482,10 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PaletteGuess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oldwhy.PaletteGuess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -479,7 +502,10 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PaletteGuess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oldwhy.PaletteGuess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

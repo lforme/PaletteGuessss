@@ -10,6 +10,8 @@ import UIKit
 import RxCocoa
 import RxSwift
 import SnapKit
+import MultiPeer
+import PKHUD
 
 class ViewController: UIViewController {
     
@@ -33,6 +35,14 @@ class ViewController: UIViewController {
     }
     
     func setupStartVC() {
+        
+        guard let uuid = UIDevice.getUUID() else {
+            HUD.flash(.label("无法获取设备UUID"), delay: 2)
+            return
+        }
+        MultiPeer.instance.initialize(serviceType: "Palette-Guess", deviceName: uuid)
+        MultiPeer.instance.autoConnect()
+        
         let startVC: StartViewController = ViewLoader.Storyboard.controller(from: "Main")
         navigationVC = BaseNavigationController(rootViewController: startVC)
         
