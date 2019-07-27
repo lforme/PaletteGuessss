@@ -19,9 +19,31 @@ class PeopleCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var role: UILabel!
+    @IBOutlet weak var playLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        playLabel.backgroundColor = RandomFlatColorWithShade(.light)
+        playLabel.clipsToBounds = true
+        playLabel.layer.cornerRadius = playLabel.bounds.width / 2
+        playLabel.layer.borderColor = ContrastColorOf(playLabel.backgroundColor!, returnFlat: true).cgColor
+        playLabel.layer.borderWidth = 2
+    }
+    
+    func bindData(peer: Peer, numbser: Int) {
+        
+        if peer.isPainter {
+            role.text = "我来画!"
+        } else {
+            role.text = "我来猜,"
+        }
+        
+        if peer.peerID.displayName == UIDevice.getUUID() {
+            playLabel.text = "我"
+        } else {
+            playLabel.text = "玩家\(numbser.description)"
+        }
     }
 }
 
@@ -60,7 +82,7 @@ class MorePeopleController: UICollectionViewController {
         alignedFlowLayout?.minimumInteritemSpacing = 10
         alignedFlowLayout?.minimumLineSpacing = 10
 //        alignedFlowLayout?.estimatedItemSize = CGSize(width: 147, height: 177)
-        alignedFlowLayout?.itemSize = CGSize(width: 150, height: 180)
+        alignedFlowLayout?.itemSize = CGSize(width: 136, height: 240)
     }
     
     
@@ -70,7 +92,10 @@ class MorePeopleController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PeopleCell", for: indexPath) as! PeopleCell
-        cell.role.text = indexPath.item.description
+        
+        let data = dataSource[indexPath.item]
+        cell.bindData(peer: data, numbser: indexPath.item)
+        
         return cell
     }
 }
