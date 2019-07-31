@@ -8,11 +8,21 @@
 
 import Foundation
 import MultiPeer
-
+import HandyJSON
+import MultipeerConnectivity
 
 fileprivate var isPainterAssociationKey: UInt8 = 0
 
 extension Peer {
+    
+    func toHandyJSONPeer() -> HandyJSONPeer {
+        let p = HandyJSONPeer()
+        p.displayName = peerID.displayName
+        if let s = HandyJSONPeer.ConnectionState(rawValue: state.rawValue) {
+            p.connectionState = s
+        }
+        return p
+    }
     
     var isPainter: Bool {
         get {
@@ -35,7 +45,6 @@ extension Peer: Hashable, Equatable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(self.peerID)
         hasher.combine(self.state)
-        hasher.combine(self.isPainter)
     }
     
     public var hashValue: Int {
@@ -46,5 +55,24 @@ extension Peer: Hashable, Equatable {
     
     public static func == (lhs: Peer, rhs: Peer) -> Bool {
         return lhs.peerID == rhs.peerID
+    }
+}
+
+public class HandyJSONPeer: HandyJSON {
+    
+    public enum ConnectionState: Int, HandyJSONEnum {
+        case notConnected = 0
+        case connecting
+        case connected
+    }
+    
+    public var displayName: String!
+    public var connectionState: ConnectionState!
+    
+    required public init() { }
+    
+    func toPeer() -> Peer {
+        
+        return Peer(peerID: MCPeerID(displayName: displayName), state: MCSessionState(rawValue: connectionState.rawValue)!)
     }
 }

@@ -22,6 +22,7 @@
 		9C9D97C022E734C1001610E0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */; };
 		9C9D97C322E73799001610E0 /* FZYouMaoZaiJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */; };
 		9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97C422E73AC9001610E0 /* Font+Ex.swift */; };
+		9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */; };
 		9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */; };
 		9CB10CBF22EBFE350034C14B /* Peer+role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBE22EBFE350034C14B /* Peer+role.swift */; };
 		9CB10CC122EBFE780034C14B /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */; };
@@ -53,6 +54,7 @@
 		9C9D97BF22E734C1001610E0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYouMaoZaiJ.TTF; sourceTree = "<group>"; };
 		9C9D97C422E73AC9001610E0 /* Font+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ex.swift"; sourceTree = "<group>"; };
+		9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerSendDataType.swift; sourceTree = "<group>"; };
 		9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIdevice+Ex.swift"; sourceTree = "<group>"; };
 		9CB10CBE22EBFE350034C14B /* Peer+role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Peer+role.swift"; sourceTree = "<group>"; };
 		9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		9C9D97A922E71F2B001610E0 /* PaletteGuess */ = {
 			isa = PBXGroup;
 			children = (
+				9CA8755222F1BA48009A0EC1 /* ViewModels */,
 				9CC272B822EB2DC5005D9EB3 /* Views */,
 				9C9D97C122E7378C001610E0 /* StaticResource */,
 				9C9D97BE22E734A9001610E0 /* CommonFramework */,
@@ -135,6 +138,14 @@
 				9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */,
 			);
 			path = StaticResource;
+			sourceTree = "<group>";
+		};
+		9CA8755222F1BA48009A0EC1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9CC272B822EB2DC5005D9EB3 /* Views */ = {
@@ -328,6 +339,7 @@
 				9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */,
 				9C5225DB22E7F2B7007F05F3 /* APPDelegate+Ex.swift in Sources */,
 				9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */,
+				9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */,
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,

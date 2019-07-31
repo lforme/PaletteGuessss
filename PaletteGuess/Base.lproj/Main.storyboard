@@ -99,7 +99,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-6y-FZN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="46"/>
-                                                                <color key="backgroundColor" red="0.38027304410000001" green="0.61682158710000001" blue="0.91468781229999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.38039215686274508" green="0.61568627450980395" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="28"/>
                                                                 <state key="normal" title="多人模式">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,40 +207,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="136" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="shangyi" translatesAutoresizingMaskIntoConstraints="NO" id="4Op-67-b8Y">
-                                            <rect key="frame" x="38" y="12" width="60" height="112"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="role_guesser" translatesAutoresizingMaskIntoConstraints="NO" id="4Op-67-b8Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="136" height="210"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="HmH-GN-Dbc"/>
-                                                <constraint firstAttribute="height" constant="112" id="Wg4-ke-CJR"/>
+                                                <constraint firstAttribute="height" constant="210" id="oQL-7O-yqh"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-6R-geT">
-                                            <rect key="frame" x="16" y="200" width="104" height="26"/>
-                                            <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="22"/>
-                                            <color key="textColor" red="0.039215686270000001" green="0.1215686275" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="玩家99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-6S-hqx">
-                                            <rect key="frame" x="44" y="140" width="48" height="48"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="Hed-Jy-8vT"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Q02-ZP-OFL"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="16"/>
-                                            <color key="textColor" red="0.039215686270000001" green="0.1215686275" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hEp-XV-T24">
+                                            <rect key="frame" x="25" y="208.5" width="86" height="29.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="玩家99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-6S-hqx">
+                                                    <rect key="frame" x="0.0" y="4" width="53" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-6R-geT">
+                                                    <rect key="frame" x="61" y="0.0" width="25" height="29.5"/>
+                                                    <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="25"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="eaE-6S-hqx" firstAttribute="centerX" secondItem="4Op-67-b8Y" secondAttribute="centerX" id="0AK-Df-l9z"/>
-                                    <constraint firstItem="8pO-6R-geT" firstAttribute="top" secondItem="eaE-6S-hqx" secondAttribute="bottom" constant="12" id="1mW-Vn-drF"/>
-                                    <constraint firstAttribute="trailing" secondItem="8pO-6R-geT" secondAttribute="trailing" constant="16" id="2NU-VK-ma7"/>
-                                    <constraint firstItem="eaE-6S-hqx" firstAttribute="top" secondItem="4Op-67-b8Y" secondAttribute="bottom" constant="16" id="8zy-cc-Lj6"/>
-                                    <constraint firstItem="4Op-67-b8Y" firstAttribute="centerX" secondItem="Ai7-Yy-e4q" secondAttribute="centerX" id="M4g-E5-IwU"/>
-                                    <constraint firstItem="4Op-67-b8Y" firstAttribute="top" secondItem="Ai7-Yy-e4q" secondAttribute="top" constant="12" id="NOu-Dl-OAa"/>
-                                    <constraint firstItem="8pO-6R-geT" firstAttribute="leading" secondItem="Ai7-Yy-e4q" secondAttribute="leading" constant="16" id="o41-wg-yYr"/>
+                                    <constraint firstItem="4Op-67-b8Y" firstAttribute="top" secondItem="Ai7-Yy-e4q" secondAttribute="top" id="HfZ-Q1-qc8"/>
+                                    <constraint firstItem="hEp-XV-T24" firstAttribute="centerX" secondItem="4Op-67-b8Y" secondAttribute="centerX" id="Zn8-5b-rz7"/>
+                                    <constraint firstItem="4Op-67-b8Y" firstAttribute="leading" secondItem="Ai7-Yy-e4q" secondAttribute="leading" id="dS4-sr-PjR"/>
+                                    <constraint firstAttribute="bottom" secondItem="hEp-XV-T24" secondAttribute="bottom" constant="2" id="j0o-IL-75r"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Op-67-b8Y" secondAttribute="trailing" id="yzV-3e-iJ4"/>
                                 </constraints>
                                 <size key="customSize" width="136" height="240"/>
                                 <connections>
@@ -263,6 +258,7 @@
     </scenes>
     <resources>
         <image name="caihong" width="75" height="47"/>
+        <image name="role_guesser" width="75" height="125"/>
         <image name="shangyi" width="50" height="50"/>
         <image name="start_bg_image" width="306" height="662.5"/>
     </resources>
