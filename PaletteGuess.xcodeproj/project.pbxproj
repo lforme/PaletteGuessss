@@ -13,6 +13,10 @@
 		9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225DA22E7F2B7007F05F3 /* NSObject+Rx.swift */; };
 		9C5225DF22E7F388007F05F3 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225DE22E7F388007F05F3 /* UIViewController+Swizzling.swift */; };
 		9C5225E122E7FAC7007F05F3 /* ViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225E022E7FAC7007F05F3 /* ViewLoader.swift */; };
+		9C7078D222F27C3C0017E025 /* PainterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7078D122F27C3C0017E025 /* PainterViewController.swift */; };
+		9C7078D422F286510017E025 /* MultiPeer+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7078D322F286510017E025 /* MultiPeer+Ex.swift */; };
+		9C7078D622F2F2790017E025 /* PainterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7078D522F2F2790017E025 /* PainterViewModel.swift */; };
+		9C7078D822F2F3DD0017E025 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7078D722F2F3DD0017E025 /* UIViewController+Ex.swift */; };
 		9C9D97AB22E71F2B001610E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97AA22E71F2B001610E0 /* AppDelegate.swift */; };
 		9C9D97AD22E71F2B001610E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97AC22E71F2B001610E0 /* ViewController.swift */; };
 		9C9D97B022E71F2B001610E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9D97AE22E71F2B001610E0 /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 		9C5225DA22E7F2B7007F05F3 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		9C5225DE22E7F388007F05F3 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
 		9C5225E022E7FAC7007F05F3 /* ViewLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLoader.swift; sourceTree = "<group>"; };
+		9C7078D122F27C3C0017E025 /* PainterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainterViewController.swift; sourceTree = "<group>"; };
+		9C7078D322F286510017E025 /* MultiPeer+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiPeer+Ex.swift"; sourceTree = "<group>"; };
+		9C7078D522F2F2790017E025 /* PainterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainterViewModel.swift; sourceTree = "<group>"; };
+		9C7078D722F2F3DD0017E025 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		9C9D97A722E71F2B001610E0 /* PaletteGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaletteGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9D97AA22E71F2B001610E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9D97AC22E71F2B001610E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 				9C9D97AC22E71F2B001610E0 /* ViewController.swift */,
 				9C9D97BC22E7343F001610E0 /* StartViewController.swift */,
 				9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */,
+				9C7078D122F27C3C0017E025 /* PainterViewController.swift */,
 				9C9D97AE22E71F2B001610E0 /* Main.storyboard */,
 				9C9D97B122E71F2C001610E0 /* Assets.xcassets */,
 				9C9D97B322E71F2C001610E0 /* LaunchScreen.storyboard */,
@@ -128,6 +137,8 @@
 				9C5225DA22E7F2B7007F05F3 /* NSObject+Rx.swift */,
 				9C5225DE22E7F388007F05F3 /* UIViewController+Swizzling.swift */,
 				9CB10CBE22EBFE350034C14B /* Peer+role.swift */,
+				9C7078D322F286510017E025 /* MultiPeer+Ex.swift */,
+				9C7078D722F2F3DD0017E025 /* UIViewController+Ex.swift */,
 			);
 			path = CommonFramework;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */,
+				9C7078D522F2F2790017E025 /* PainterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -338,12 +350,16 @@
 				9C9D97AB22E71F2B001610E0 /* AppDelegate.swift in Sources */,
 				9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */,
 				9C5225DB22E7F2B7007F05F3 /* APPDelegate+Ex.swift in Sources */,
+				9C7078D422F286510017E025 /* MultiPeer+Ex.swift in Sources */,
+				9C7078D822F2F3DD0017E025 /* UIViewController+Ex.swift in Sources */,
 				9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */,
 				9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */,
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,
 				9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */,
+				9C7078D222F27C3C0017E025 /* PainterViewController.swift in Sources */,
+				9C7078D622F2F2790017E025 /* PainterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

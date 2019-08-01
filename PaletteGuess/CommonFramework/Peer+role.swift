@@ -18,6 +18,7 @@ extension Peer {
     func toHandyJSONPeer() -> HandyJSONPeer {
         let p = HandyJSONPeer()
         p.displayName = peerID.displayName
+        p.isPainter = isPainter
         if let s = HandyJSONPeer.ConnectionState(rawValue: state.rawValue) {
             p.connectionState = s
         }
@@ -68,11 +69,13 @@ public class HandyJSONPeer: HandyJSON {
     
     public var displayName: String!
     public var connectionState: ConnectionState!
+    public var isPainter: Bool!
     
     required public init() { }
     
     func toPeer() -> Peer {
-        
-        return Peer(peerID: MCPeerID(displayName: displayName), state: MCSessionState(rawValue: connectionState.rawValue)!)
+        let p = Peer(peerID: MCPeerID(displayName: displayName), state: MCSessionState(rawValue: connectionState.rawValue)!)
+        p.isPainter = isPainter
+        return p
     }
 }

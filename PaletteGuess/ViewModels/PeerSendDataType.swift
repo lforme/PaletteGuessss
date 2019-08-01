@@ -10,4 +10,5 @@ import Foundation
 
 enum PeerSendDataType: UInt32 {
     case peer = 1
+    case picture
 }

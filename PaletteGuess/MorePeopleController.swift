@@ -54,6 +54,7 @@ class MorePeopleController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dataSource.removeAll()
         threeSecondsTimerTrigger()
     }
     
@@ -70,10 +71,12 @@ class MorePeopleController: UICollectionViewController {
         self.navigationItem.titleView = waitingView
         
         let button = UIButton(type: .system)
-        button.setTitle("我来当画家~", for: .normal)
-        button.setTitleColor(#colorLiteral(red: 0.3803921569, green: 0.6156862745, blue: 0.9137254902, alpha: 1), for: .normal)
+        button.setTitle("  我来当画家~ ", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.catFont(size: 22)
         button.addTarget(self, action: #selector(becomePainterTap(button:)), for: .touchUpInside)
+        button.backgroundColor = #colorLiteral(red: 0.3803921569, green: 0.6156862745, blue: 0.9137254902, alpha: 1)
+        button.setShadow()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
     }
     
@@ -102,6 +105,11 @@ class MorePeopleController: UICollectionViewController {
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = PainterViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
@@ -109,8 +117,23 @@ extension MorePeopleController: MultiPeerDelegate {
     
     func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
         
-        let result = String(data: data, encoding: .utf8)
-        print(result ?? "")
+        guard let t = PeerSendDataType(rawValue: type) else { return }
+        switch t {
+        case .peer:
+            let jsonString = String(data: data, encoding: .utf8)
+            let handyJSONPeer = HandyJSONPeer.deserialize(from: jsonString)
+            guard let peer = handyJSONPeer?.toPeer() else { break }
+            dataSource.forEach { (roopItem) in
+                if peer.peerID.displayName == roopItem.peerID.displayName {
+                    roopItem.isPainter = peer.isPainter
+                }
+            }
+            collectionView.reloadData()
+        default:
+            break
+        }
+        
+      
     }
     
     func multiPeer(connectedDevicesChanged devices: [String]) { }
@@ -126,15 +149,36 @@ extension MorePeopleController {
             .takeUntil(self.rx.methodInvoked(#selector(viewWillDisappear(_:))))
             .subscribe(onNext: {[weak self] (_) in
                 
-                let mySelfPeer = Peer(peerID: MultiPeer.instance.devicePeerID, state: MCSessionState.connected)
-                MultiPeer.instance.connectedPeers.insert(mySelfPeer, at: 0)
-                Set<Peer>(MultiPeer.instance.connectedPeers).forEach({ (p) in
-                    self?.dataSource.insert(p)
-                })
-                
-                self?.collectionView.reloadData()
+                self?.checkNewPlayerJoin()
+                self?.checkGamePrepareForStart()
                 
             }).disposed(by: rx.disposeBag)
+    }
+    
+    private func checkNewPlayerJoin() {
+        
+        let mySelfPeer = MultiPeer.instance.currentPeer
+        MultiPeer.instance.connectedPeers.insert(mySelfPeer, at: 0)
+        Set<Peer>(MultiPeer.instance.connectedPeers).forEach({[weak self] (p) in
+            self?.dataSource.insert(p)
+        })
+        self.collectionView.reloadData()
+    }
+    
+    private func checkGamePrepareForStart() {
+        dataSource.forEach {[weak self] (peer) in
+            if peer.isPainter {
+                HUD.flash(.label("游戏即将开始"), delay: 2)
+                if peer.peerID == MultiPeer.instance.currentPeer.peerID {
+                    print("我来画画")
+                    let painterVC = PainterViewController()
+                    self?.navigationController?.pushViewController(painterVC, animated: true)
+                    
+                } else {
+                    print("我来猜")
+                }
+            }
+        }
     }
 }
 
@@ -142,10 +186,11 @@ extension MorePeopleController {
 extension MorePeopleController {
     
     @objc func becomePainterTap(button: UIButton) {
+        MultiPeer.instance.currentPeer.isPainter = true
         let set = Set<Peer>(self.dataSource)
         
         let optionValue = set.filter { (peer) -> Bool in
-            return MultiPeer.instance.devicePeerID == peer.peerID
+            return MultiPeer.instance.currentPeer.peerID == peer.peerID
             }.last
         
         guard let myself = optionValue else {
@@ -153,7 +198,7 @@ extension MorePeopleController {
         }
         
         set.map { (peer) -> Peer in
-            if MultiPeer.instance.devicePeerID == peer.peerID {
+            if MultiPeer.instance.currentPeer.peerID == peer.peerID {
                 peer.isPainter = true
             }
             return peer
