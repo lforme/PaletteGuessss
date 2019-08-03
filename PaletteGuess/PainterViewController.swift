@@ -12,6 +12,10 @@ import NXDrawKit
 import AVFoundation
 import MobileCoreServices
 import EasyAnimation
+import RxCocoa
+import RxSwift
+import PKHUD
+import RealmSwift
 
 class PainterViewController: UIViewController {
     
@@ -22,6 +26,7 @@ class PainterViewController: UIViewController {
     weak var toolBar: ToolBar?
     weak var bottomView: UIView?
     let vm = PainterViewModel()
+    var saveImage: UIImage?
     
     fileprivate var bottomBoundaryPositionY: CGFloat = 0.0
     fileprivate var bottomIsHiden = false {
@@ -55,16 +60,36 @@ class PainterViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         bottomBoundaryPositionY = self.bottomView?.layer.position.y ?? 0.0
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        MultiPeer.instance.delegate = self
+
         vm.targetWord.subscribe(onNext: {[weak self] (t) in
             self?.title = t
         }).disposed(by: rx.disposeBag)
+        
+        PeerMiddleware.shared.gameOver
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (isOver) in
+                if isOver {
+                   
+                    self?.showAlert(title: "游戏结束", message: "游戏即将结束, 是否要保存这个画", buttonTitles: ["取消", "保存"], highlightedButtonIndex: 1, completion: { (buttonIndex) in
+                        if buttonIndex == 1 {
+                            let realm = try! Realm()
+                            let picModel = RealmImageModel()
+                            picModel.joinCount.value = MultiPeer.instance.connectedPeers.count + 1
+                            picModel.imageData = self?.saveImage?.pngData()
+                            try! realm.write {
+                                realm.add(picModel)
+                            }
+                            
+                            self?.navigationController?.popToRootViewController(animated: true)
+                        }
+                    })
+                }
+            }).disposed(by: rx.disposeBag)
+        
         setupUI()
         initialize()
         setupRightNavigationItems()
@@ -114,11 +139,14 @@ class PainterViewController: UIViewController {
         let toolBar = ToolBar()
         toolBar.undoButton?.addTarget(self, action: #selector(PainterViewController.onClickUndoButton), for: .touchUpInside)
         toolBar.redoButton?.addTarget(self, action: #selector(PainterViewController.onClickRedoButton), for: .touchUpInside)
-        toolBar.loadButton?.addTarget(self, action: #selector(PainterViewController.onClickLoadButton), for: .touchUpInside)
+        toolBar.loadButton?.isHidden = true
         toolBar.saveButton?.addTarget(self, action: #selector(PainterViewController.onClickSaveButton), for: .touchUpInside)
-        toolBar.saveButton?.setTitle("share", for: UIControl.State())   // default title is "Save"
+        toolBar.saveButton?.setTitle("分享", for: UIControl.State())
+        toolBar.saveButton?.titleLabel?.font = UIFont.catFont(size: 18)
         toolBar.clearButton?.addTarget(self, action: #selector(PainterViewController.onClickClearButton), for: .touchUpInside)
-        toolBar.loadButton?.isEnabled = true
+        toolBar.clearButton?.setTitle("清除", for: UIControl.State())
+        toolBar.clearButton?.titleLabel?.font = UIFont.catFont(size: 18)
+        
         self.bottomView?.addSubview(toolBar)
         toolBar.snp.makeConstraints { (maker) in
             maker.left.right.top.equalToSuperview()
@@ -160,10 +188,6 @@ class PainterViewController: UIViewController {
         self.canvasView?.redo()
     }
     
-    @objc func onClickLoadButton() {
-        //        self.showActionSheetForPhotoSelection()
-    }
-    
     @objc func onClickSaveButton() {
         self.canvasView?.save()
     }
@@ -172,18 +196,6 @@ class PainterViewController: UIViewController {
         self.canvasView?.clear()
     }
 }
-
-extension PainterViewController: MultiPeerDelegate {
-    
-    func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
-        
-        let result = String(data: data, encoding: .utf8)
-        print(result ?? "")
-    }
-    
-    func multiPeer(connectedDevicesChanged devices: [String]) { }
-}
-
 
 // MARK: - CanvasDelegate
 extension PainterViewController: CanvasDelegate {
@@ -194,6 +206,11 @@ extension PainterViewController: CanvasDelegate {
     func canvas(_ canvas: Canvas, didUpdateDrawing drawing: Drawing, mergedImage image: UIImage?) {
         self.updateToolBarButtonStatus(canvas)
         bottomIsHiden = true
+        if let data = image?.asPNGData() {
+            MultiPeer.instance.send(data: data, type: PeerSendDataType.picture.rawValue)
+        }
+        
+        self.saveImage = image
     }
     
     func canvas(_ canvas: Canvas, didSaveDrawing drawing: Drawing, mergedImage image: UIImage?) {
@@ -282,6 +299,9 @@ extension PainterViewController {
             
             if buttonIndex == 1 {
                 self?.vm.targetWord.accept(word)
+                if let data = word.data(using: .utf8) {
+                    MultiPeer.instance.send(data: data, type: PeerSendDataType.text.rawValue)
+                }
             }
         }
     }

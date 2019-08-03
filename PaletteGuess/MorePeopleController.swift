@@ -60,9 +60,22 @@ class MorePeopleController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MultiPeer.instance.delegate = self
         setupNavigation()
         setupColletionView()
+        observeRx()
+    }
+    
+    func observeRx() {
+        PeerMiddleware.shared.obReceivePeer.observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] (p) in
+            guard let peer = p else { return }
+            
+            self?.dataSource.forEach { (roopItem) in
+                if peer.peerID.displayName == roopItem.peerID.displayName {
+                    roopItem.isPainter = peer.isPainter
+                }
+            }
+            self?.collectionView.reloadData()
+        }).disposed(by: rx.disposeBag)
     }
     
     func setupNavigation() {
@@ -112,34 +125,6 @@ class MorePeopleController: UICollectionViewController {
     }
 }
 
-
-extension MorePeopleController: MultiPeerDelegate {
-    
-    func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
-        
-        guard let t = PeerSendDataType(rawValue: type) else { return }
-        switch t {
-        case .peer:
-            let jsonString = String(data: data, encoding: .utf8)
-            let handyJSONPeer = HandyJSONPeer.deserialize(from: jsonString)
-            guard let peer = handyJSONPeer?.toPeer() else { break }
-            dataSource.forEach { (roopItem) in
-                if peer.peerID.displayName == roopItem.peerID.displayName {
-                    roopItem.isPainter = peer.isPainter
-                }
-            }
-            collectionView.reloadData()
-        default:
-            break
-        }
-        
-      
-    }
-    
-    func multiPeer(connectedDevicesChanged devices: [String]) { }
-}
-
-
 extension MorePeopleController {
     
     func threeSecondsTimerTrigger() {
@@ -176,6 +161,8 @@ extension MorePeopleController {
                     
                 } else {
                     print("我来猜")
+                    let GuesserVC: GuesserViewController = ViewLoader.Storyboard.controller(from: "Main")
+                    self?.navigationController?.pushViewController(GuesserVC, animated: true)
                 }
             }
         }

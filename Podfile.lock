@@ -14,12 +14,16 @@ PODS:
   - JCore (2.1.1)
   - JPush (3.2.1):
     - JCore (< 3.0.0, >= 2.0.0)
-  - Macaw (0.9.5):
-    - SWXMLHash
+  - LTMorphingLabel (0.7.0)
   - MJRefresh (3.2.0)
   - MultiPeer (0.1.0)
   - NXDrawKit (0.8.0)
   - PKHUD (5.2.1)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
+  - RealmSwift (3.17.1):
+    - Realm (= 3.17.1)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -31,7 +35,6 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
   - SnapKit (5.0.0)
-  - SWXMLHash (4.9.0)
   - Then (2.5.0)
 
 DEPENDENCIES:
@@ -43,11 +46,12 @@ DEPENDENCIES:
   - HandyJSON (~> 5.0.0)
   - IQKeyboardManagerSwift (= 6.3.0)
   - JPush
-  - Macaw
+  - LTMorphingLabel
   - MJRefresh
   - MultiPeer
   - NXDrawKit
   - PKHUD (~> 5.2.1)
+  - RealmSwift
   - RxCocoa (~> 5.0.0)
   - RxDataSources
   - RxSwift (~> 5.0.0)
@@ -65,17 +69,18 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - JCore
     - JPush
-    - Macaw
+    - LTMorphingLabel
     - MJRefresh
     - MultiPeer
     - NXDrawKit
     - PKHUD
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
-    - SWXMLHash
     - Then
 
 EXTERNAL SOURCES:
@@ -98,19 +103,20 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
   JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
-  Macaw: 10bf9e327cb75f24e3225d5229a80ed544df85f0
+  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MultiPeer: 8be1b3b47faa9d2e94b4c8c29a2d984eb0d68007
   NXDrawKit: 62a73ad64ae1d7a04b87256c0ee106426ea3abee
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
+  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
-  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
 
-PODFILE CHECKSUM: 8324601cc9c011a37f98841fcb1251eee62481a7
+PODFILE CHECKSUM: e8974265eb974d9efd6396d74703e11b196a6afa
 
 COCOAPODS: 1.5.3

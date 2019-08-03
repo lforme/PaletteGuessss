@@ -25,9 +25,8 @@ target 'PaletteGuess' do
   pod 'MultiPeer'
   pod 'AlignedCollectionViewFlowLayout'
   pod 'HandyJSON', '~> 5.0.0'
-  pod "Macaw"
-  
+  pod 'LTMorphingLabel'
   pod 'JPush'
-
+  pod 'RealmSwift'
 
 end

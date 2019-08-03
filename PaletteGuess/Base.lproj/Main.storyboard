@@ -190,6 +190,75 @@
             </objects>
             <point key="canvasLocation" x="-659.4202898550725" y="689.73214285714278"/>
         </scene>
+        <!--Guesser View Controller-->
+        <scene sceneID="Qyu-TT-eXI">
+            <objects>
+                <viewController storyboardIdentifier="GuesserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tzb-Xf-MJh" customClass="GuesserViewController" customModule="PaletteGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AN1-Ng-CRH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-ZD-7EW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvM-ws-Dew">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3LO-Qm-f97">
+                                                <rect key="frame" x="16" y="60" width="382" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="tEI-bp-igk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我猜到了!!!!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-J2-LxH">
+                                                <rect key="frame" x="16" y="530" width="382" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="ECg-Ba-dYL"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="FZYOUMZJW--GB1-0" family="FZYouMaoZaiS-R-GB" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3LO-Qm-f97" secondAttribute="trailing" constant="16" id="QfI-nf-wmp"/>
+                                            <constraint firstItem="3LO-Qm-f97" firstAttribute="top" secondItem="mvM-ws-Dew" secondAttribute="top" constant="60" id="T2A-kI-7FU"/>
+                                            <constraint firstItem="3LO-Qm-f97" firstAttribute="leading" secondItem="mvM-ws-Dew" secondAttribute="leading" constant="16" id="bjE-7D-T2J"/>
+                                            <constraint firstAttribute="trailing" secondItem="o3A-J2-LxH" secondAttribute="trailing" constant="16" id="gqe-B9-lDD"/>
+                                            <constraint firstItem="o3A-J2-LxH" firstAttribute="leading" secondItem="mvM-ws-Dew" secondAttribute="leading" constant="16" id="jxK-YO-rGn"/>
+                                            <constraint firstItem="o3A-J2-LxH" firstAttribute="top" secondItem="3LO-Qm-f97" secondAttribute="bottom" constant="70" id="pLS-M6-rFq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mvM-ws-Dew" firstAttribute="centerX" secondItem="Ltk-ZD-7EW" secondAttribute="centerX" id="3Di-37-yt5"/>
+                                    <constraint firstItem="mvM-ws-Dew" firstAttribute="leading" secondItem="Ltk-ZD-7EW" secondAttribute="leading" id="PHj-Uz-4qa"/>
+                                    <constraint firstItem="mvM-ws-Dew" firstAttribute="top" secondItem="Ltk-ZD-7EW" secondAttribute="top" id="QdG-JW-hB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mvM-ws-Dew" secondAttribute="trailing" id="SyE-i2-tNj"/>
+                                    <constraint firstAttribute="bottom" secondItem="mvM-ws-Dew" secondAttribute="bottom" id="fnq-AV-FDk"/>
+                                    <constraint firstItem="mvM-ws-Dew" firstAttribute="centerY" secondItem="Ltk-ZD-7EW" secondAttribute="centerY" id="oot-4a-8bz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HV1-H5-qLE" firstAttribute="bottom" secondItem="Ltk-ZD-7EW" secondAttribute="bottom" id="29R-hy-Teh"/>
+                            <constraint firstItem="Ltk-ZD-7EW" firstAttribute="leading" secondItem="HV1-H5-qLE" secondAttribute="leading" id="cFK-Xy-uQX"/>
+                            <constraint firstItem="HV1-H5-qLE" firstAttribute="trailing" secondItem="Ltk-ZD-7EW" secondAttribute="trailing" id="d3t-nd-kwu"/>
+                            <constraint firstItem="Ltk-ZD-7EW" firstAttribute="top" secondItem="HV1-H5-qLE" secondAttribute="top" id="n3c-TO-tDr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HV1-H5-qLE"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="mvM-ws-Dew" id="ndR-CU-gr3"/>
+                        <outlet property="displayImageView" destination="3LO-Qm-f97" id="nSW-yj-1XV"/>
+                        <outlet property="textfield" destination="o3A-J2-LxH" id="rY9-wk-ext"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehz-9Q-CdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2566.666666666667" y="1267.6339285714284"/>
+        </scene>
         <!--More People Controller-->
         <scene sceneID="hTb-Lb-HEu">
             <objects>

@@ -12,13 +12,14 @@ import HandyJSON
 import MultipeerConnectivity
 
 fileprivate var isPainterAssociationKey: UInt8 = 0
-
+fileprivate var isWinnerAssociationKey: UInt8 = 0
 extension Peer {
     
     func toHandyJSONPeer() -> HandyJSONPeer {
         let p = HandyJSONPeer()
         p.displayName = peerID.displayName
         p.isPainter = isPainter
+        p.isWinner = isWinner
         if let s = HandyJSONPeer.ConnectionState(rawValue: state.rawValue) {
             p.connectionState = s
         }
@@ -36,6 +37,20 @@ extension Peer {
         
         set {
             objc_setAssociatedObject(self, &isPainterAssociationKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
+    var isWinner: Bool {
+        get {
+            var associateValue = objc_getAssociatedObject(self, &isWinnerAssociationKey)
+            if associateValue == nil {
+                associateValue = false
+            }
+            return associateValue as! Bool
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &isWinnerAssociationKey, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
 }
@@ -70,12 +85,14 @@ public class HandyJSONPeer: HandyJSON {
     public var displayName: String!
     public var connectionState: ConnectionState!
     public var isPainter: Bool!
+    public var isWinner: Bool!
     
     required public init() { }
     
     func toPeer() -> Peer {
         let p = Peer(peerID: MCPeerID(displayName: displayName), state: MCSessionState(rawValue: connectionState.rawValue)!)
         p.isPainter = isPainter
+        p.isWinner = isWinner
         return p
     }
 }

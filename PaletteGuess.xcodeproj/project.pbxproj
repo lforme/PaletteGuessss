@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0A40C122F53D110080E4A2 /* GuesserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A40C022F53D110080E4A2 /* GuesserViewController.swift */; };
+		9C0A40C322F544280080E4A2 /* GuesserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A40C222F544280080E4A2 /* GuesserViewModel.swift */; };
+		9C0A40C522F577210080E4A2 /* PeerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A40C422F577210080E4A2 /* PeerMiddleware.swift */; };
+		9C0A40C722F58B5E0080E4A2 /* RealmImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A40C622F58B5E0080E4A2 /* RealmImageModel.swift */; };
 		9C5225D722E7F24E007F05F3 /* PGStaticConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225D622E7F24E007F05F3 /* PGStaticConst.swift */; };
 		9C5225DB22E7F2B7007F05F3 /* APPDelegate+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225D822E7F2B7007F05F3 /* APPDelegate+Ex.swift */; };
 		9C5225DC22E7F2B7007F05F3 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5225D922E7F2B7007F05F3 /* HasDisposeBag.swift */; };
@@ -41,6 +45,10 @@
 		580DED6197B2800D40E54597 /* Pods_PaletteGuess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaletteGuess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D648E07D07C8EA3B7763FB6 /* Pods-PaletteGuess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaletteGuess.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaletteGuess/Pods-PaletteGuess.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA95D4CED93072688A17085 /* Pods-PaletteGuess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaletteGuess.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaletteGuess/Pods-PaletteGuess.release.xcconfig"; sourceTree = "<group>"; };
+		9C0A40C022F53D110080E4A2 /* GuesserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesserViewController.swift; sourceTree = "<group>"; };
+		9C0A40C222F544280080E4A2 /* GuesserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesserViewModel.swift; sourceTree = "<group>"; };
+		9C0A40C422F577210080E4A2 /* PeerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerMiddleware.swift; sourceTree = "<group>"; };
+		9C0A40C622F58B5E0080E4A2 /* RealmImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmImageModel.swift; sourceTree = "<group>"; };
 		9C5225D622E7F24E007F05F3 /* PGStaticConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGStaticConst.swift; sourceTree = "<group>"; };
 		9C5225D822E7F2B7007F05F3 /* APPDelegate+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APPDelegate+Ex.swift"; sourceTree = "<group>"; };
 		9C5225D922E7F2B7007F05F3 /* HasDisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 				9C9D97BC22E7343F001610E0 /* StartViewController.swift */,
 				9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */,
 				9C7078D122F27C3C0017E025 /* PainterViewController.swift */,
+				9C0A40C022F53D110080E4A2 /* GuesserViewController.swift */,
 				9C9D97AE22E71F2B001610E0 /* Main.storyboard */,
 				9C9D97B122E71F2C001610E0 /* Assets.xcassets */,
 				9C9D97B322E71F2C001610E0 /* LaunchScreen.storyboard */,
@@ -156,6 +165,9 @@
 			children = (
 				9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */,
 				9C7078D522F2F2790017E025 /* PainterViewModel.swift */,
+				9C0A40C222F544280080E4A2 /* GuesserViewModel.swift */,
+				9C0A40C422F577210080E4A2 /* PeerMiddleware.swift */,
+				9C0A40C622F58B5E0080E4A2 /* RealmImageModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,16 +284,17 @@
 				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
 				"${BUILT_PRODUCTS_DIR}/MultiPeer/MultiPeer.framework",
 				"${BUILT_PRODUCTS_DIR}/NXDrawKit/NXDrawKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
@@ -295,16 +308,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiPeer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NXDrawKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
@@ -345,6 +359,7 @@
 				9C5225D722E7F24E007F05F3 /* PGStaticConst.swift in Sources */,
 				9C5225DC22E7F2B7007F05F3 /* HasDisposeBag.swift in Sources */,
 				9CB10CC122EBFE780034C14B /* ObjectAssociation.swift in Sources */,
+				9C0A40C522F577210080E4A2 /* PeerMiddleware.swift in Sources */,
 				9C5225DF22E7F388007F05F3 /* UIViewController+Swizzling.swift in Sources */,
 				9C5225E122E7FAC7007F05F3 /* ViewLoader.swift in Sources */,
 				9C9D97AB22E71F2B001610E0 /* AppDelegate.swift in Sources */,
@@ -352,14 +367,17 @@
 				9C5225DB22E7F2B7007F05F3 /* APPDelegate+Ex.swift in Sources */,
 				9C7078D422F286510017E025 /* MultiPeer+Ex.swift in Sources */,
 				9C7078D822F2F3DD0017E025 /* UIViewController+Ex.swift in Sources */,
+				9C0A40C722F58B5E0080E4A2 /* RealmImageModel.swift in Sources */,
 				9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */,
 				9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */,
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,
+				9C0A40C322F544280080E4A2 /* GuesserViewModel.swift in Sources */,
 				9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */,
 				9C7078D222F27C3C0017E025 /* PainterViewController.swift in Sources */,
 				9C7078D622F2F2790017E025 /* PainterViewModel.swift in Sources */,
+				9C0A40C122F53D110080E4A2 /* GuesserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
