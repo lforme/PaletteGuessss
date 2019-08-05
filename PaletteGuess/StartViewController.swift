@@ -23,4 +23,10 @@ class StartViewController: UIViewController {
     func setupButtons() {
         morePeopleButton.setCircular(value: 7)
     }
+    
+    @IBAction func myProductTap(_ sender: UIButton) {
+        let produtionVC: MyProductionController = ViewLoader.Storyboard.controller(from: "Main")
+        navigationController?.pushViewController(produtionVC, animated: true)
+    }
+    
 }

@@ -31,6 +31,8 @@
 		9C9D97C322E73799001610E0 /* FZYouMaoZaiJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */; };
 		9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9D97C422E73AC9001610E0 /* Font+Ex.swift */; };
 		9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */; };
+		9CAF9A2822F7DDB800A90D6D /* MyProductionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF9A2722F7DDB800A90D6D /* MyProductionController.swift */; };
+		9CAF9A2A22F7F20800A90D6D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF9A2922F7F20800A90D6D /* SettingViewController.swift */; };
 		9CB10CBD22EBF68A0034C14B /* UIdevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */; };
 		9CB10CBF22EBFE350034C14B /* Peer+role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CBE22EBFE350034C14B /* Peer+role.swift */; };
 		9CB10CC122EBFE780034C14B /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */; };
@@ -71,6 +73,8 @@
 		9C9D97C222E73799001610E0 /* FZYouMaoZaiJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYouMaoZaiJ.TTF; sourceTree = "<group>"; };
 		9C9D97C422E73AC9001610E0 /* Font+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ex.swift"; sourceTree = "<group>"; };
 		9CA8755322F1BA61009A0EC1 /* PeerSendDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerSendDataType.swift; sourceTree = "<group>"; };
+		9CAF9A2722F7DDB800A90D6D /* MyProductionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductionController.swift; sourceTree = "<group>"; };
+		9CAF9A2922F7F20800A90D6D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9CB10CBC22EBF68A0034C14B /* UIdevice+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIdevice+Ex.swift"; sourceTree = "<group>"; };
 		9CB10CBE22EBFE350034C14B /* Peer+role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Peer+role.swift"; sourceTree = "<group>"; };
 		9CB10CC022EBFE780034C14B /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				9CC272B922EB2DFF005D9EB3 /* MorePeopleController.swift */,
 				9C7078D122F27C3C0017E025 /* PainterViewController.swift */,
 				9C0A40C022F53D110080E4A2 /* GuesserViewController.swift */,
+				9CAF9A2722F7DDB800A90D6D /* MyProductionController.swift */,
+				9CAF9A2922F7F20800A90D6D /* SettingViewController.swift */,
 				9C9D97AE22E71F2B001610E0 /* Main.storyboard */,
 				9C9D97B122E71F2C001610E0 /* Assets.xcassets */,
 				9C9D97B322E71F2C001610E0 /* LaunchScreen.storyboard */,
@@ -295,6 +301,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
@@ -319,6 +326,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
@@ -371,8 +379,10 @@
 				9CB10CC522EC12D00034C14B /* WaitingPlayerView.swift in Sources */,
 				9CA8755422F1BA61009A0EC1 /* PeerSendDataType.swift in Sources */,
 				9C9D97BD22E7343F001610E0 /* StartViewController.swift in Sources */,
+				9CAF9A2A22F7F20800A90D6D /* SettingViewController.swift in Sources */,
 				9C9D97C522E73AC9001610E0 /* Font+Ex.swift in Sources */,
 				9C5225DD22E7F2B7007F05F3 /* NSObject+Rx.swift in Sources */,
+				9CAF9A2822F7DDB800A90D6D /* MyProductionController.swift in Sources */,
 				9C0A40C322F544280080E4A2 /* GuesserViewModel.swift in Sources */,
 				9CC272B722EB2CF8005D9EB3 /* UIView+Ex.swift in Sources */,
 				9C7078D222F27C3C0017E025 /* PainterViewController.swift in Sources */,

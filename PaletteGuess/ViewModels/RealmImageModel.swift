@@ -18,4 +18,11 @@ class RealmImageModel: Object {
     override static func indexedProperties() -> [String] {
         return ["createdDate"]
     }
+    
+    func toImage() -> UIImage? {
+        guard let d = imageData else {
+            return nil
+        }
+        return UIImage(data: d)
+    }
 }

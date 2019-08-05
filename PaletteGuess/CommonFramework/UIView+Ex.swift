@@ -27,7 +27,7 @@ extension UIView {
     }
     
     
-    func setShadow(color: UIColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1).withAlphaComponent(0.4)) {
+    func setShadow(color: UIColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1).withAlphaComponent(0.4)) {
         layer.cornerRadius = 10
         layer.shadowColor = color.cgColor
         layer.borderWidth = 0

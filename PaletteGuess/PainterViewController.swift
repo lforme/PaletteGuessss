@@ -166,7 +166,7 @@ class PainterViewController: UIViewController {
         self.view.addSubview(canvasView)
         canvasView.snp.makeConstraints { (maker) in
             maker.top.equalToSuperview().offset(8)
-            maker.bottom.equalToSuperview().offset(-8)
+            maker.bottom.equalToSuperview().offset(-20)
             maker.left.equalToSuperview().offset(8)
             maker.right.equalToSuperview().offset(-8)
         }

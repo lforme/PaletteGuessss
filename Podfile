@@ -28,5 +28,6 @@ target 'PaletteGuess' do
   pod 'LTMorphingLabel'
   pod 'JPush'
   pod 'RealmSwift'
+  pod 'SKPhotoBrowser'
 
 end

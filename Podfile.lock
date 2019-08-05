@@ -34,6 +34,7 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SKPhotoBrowser (6.1.0)
   - SnapKit (5.0.0)
   - Then (2.5.0)
 
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5.0.0)
   - RxDataSources
   - RxSwift (~> 5.0.0)
+  - SKPhotoBrowser
   - SnapKit (~> 5.0.0)
   - Then
 
@@ -80,6 +82,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SKPhotoBrowser
     - SnapKit
     - Then
 
@@ -114,9 +117,10 @@ SPEC CHECKSUMS:
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
 
-PODFILE CHECKSUM: e8974265eb974d9efd6396d74703e11b196a6afa
+PODFILE CHECKSUM: 7d6e565d3633a23ab3307068569aba7ae016c757
 
 COCOAPODS: 1.5.3
