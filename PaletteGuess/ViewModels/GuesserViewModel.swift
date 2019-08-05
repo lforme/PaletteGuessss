@@ -14,7 +14,6 @@ import MultiPeer
 class GuesserViewModel {
     
     private var targetWord: String?
-    var notiWord = "重要!重要!重要!游戏提示!"
     let obGuessWord = BehaviorRelay<String?>(value: nil)
     private let disposeBag = DisposeBag()
     
@@ -49,18 +48,33 @@ class GuesserViewModel {
         
         var switchNoti = false
         
-        return Observable<Int>.interval(.seconds(5), scheduler: MainScheduler.instance).map {[weak self] (_) -> String? in
+        return Observable<Int>.interval(.seconds(5), scheduler: MainScheduler.instance).map {[weak self] (second) -> String? in
             
             switchNoti = !switchNoti
             
             if switchNoti {
-                return self?.notiWord
+                return "重要 游戏提示 !"
             } else {
                 guard let noOption = self?.targetWord else {
                     return "暂无提示"
                 }
-                let wordCount = noOption.count.description
-                return "要猜测的词语一共 【\(wordCount)个字】"
+                
+                switch second {
+                case 0, 1, 2:
+                    let wordCount = noOption.count.description
+                    return "要猜测的词语一共 【\(wordCount)个字】"
+                case 3, 4, 5:
+                    
+                    if self?.targetWord?.contains(self?.obGuessWord.value ?? "") ?? false {
+                        return "已经猜对\(arc4random_uniform(80))%, 加油!"
+                    } else {
+                        let wordCount = noOption.count.description
+                        return "要猜测的词语一共 【\(wordCount)个字】"
+                    }
+                default:
+                     return "暂无提示"
+                }
+    
             }
         }
     }
